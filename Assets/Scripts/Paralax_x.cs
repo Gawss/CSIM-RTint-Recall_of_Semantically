@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paralax : MonoBehaviour
+public class Paralax_x : MonoBehaviour
 {
     public float speed;
     public Vector2 offset;
