@@ -8,8 +8,7 @@ namespace Experiment{
         public static SceneManager Instance { get; private set; }
         
         [SerializeField]
-        private float m_globalSpeed;
-        public float globalSpeed {get{return m_globalSpeed;} set{m_globalSpeed=value;}}
+        private float m_globalSpeed;        
 
         private GameObject pilot;
         private GameObject sign;
@@ -18,7 +17,6 @@ namespace Experiment{
         private float sensitivity = 0;
 
         private RaycastController m_RaycastController;
-        public RaycastController RaycastController {get{return m_RaycastController;} private set{m_RaycastController=value;}}
 
         private GameObject LoadingBar;
         private bool isPlayingTrial = false;
@@ -26,6 +24,13 @@ namespace Experiment{
         private bool canAccelerate = true;
 
         private int velocity = 0;
+
+        private int m_index;        
+
+        private Sprite m_sprite;
+        private AudioClip m_audioClip;
+
+        #region UNITY FUNCTIONS
 
         private void Awake(){
             if(Instance == null){
@@ -36,15 +41,11 @@ namespace Experiment{
                 sign = GameObject.Find("Sign");
                 RaycastController = gameObject.GetComponent<RaycastController>();
                 LoadingBar = GameObject.Find("LoadingBar");
+                m_index = 0;
 
             }else{
                 Destroy(gameObject);
             }
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-            
         }
 
         void Update(){
@@ -64,6 +65,7 @@ namespace Experiment{
             }
             
         }
+        #endregion
 
         private void CalculateDistance(){
             m_globalSpeed = Vector3.Distance(sign.transform.position, pilot.transform.position);
@@ -90,6 +92,8 @@ namespace Experiment{
         public void PlayTrial(){
             //Play Sound + Image
             Debug.Log("Playing Trial...");
+            m_audioClip = Resources.Load<AudioClip>("Sounds/audio" + index);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(m_audioClip);
             isPlayingTrial = true;
             StartCoroutine(WaitForStimulus());
         }
@@ -100,6 +104,16 @@ namespace Experiment{
             velocity = 1;
             canAccelerate = true;
             isPlayingTrial = false;
+            index++;
         }
+
+        #region GET & SET
+        public int index {get{return m_index;} private set{m_index=value;}}
+        public Sprite sprite {get{return m_sprite;} set{m_sprite=value;}}
+        public AudioClip audioClip {get{return m_audioClip;} set{m_audioClip=value;}}
+        public RaycastController RaycastController {get{return m_RaycastController;} private set{m_RaycastController=value;}}
+        public float globalSpeed {get{return m_globalSpeed;} set{m_globalSpeed=value;}}
+
+        #endregion
     }
 }
