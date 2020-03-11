@@ -30,6 +30,14 @@ namespace Experiment{
         private Sprite m_sprite;
         private AudioClip m_audioClip;
 
+        public GameObject plane;
+
+        [SerializeField]
+        private int num_pairs;
+
+        [SerializeField]
+        private GameObject fade;
+
         #region UNITY FUNCTIONS
 
         private void Awake(){
@@ -99,12 +107,17 @@ namespace Experiment{
         }
 
         private IEnumerator WaitForStimulus(){
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             Debug.Log("Time is done");                
             velocity = 1;
             canAccelerate = true;
             isPlayingTrial = false;
+            plane.SetActive(false);
+
             index++;
+            if(index+1 > num_pairs){
+                fade.SetActive(true);
+            }
         }
 
         #region GET & SET

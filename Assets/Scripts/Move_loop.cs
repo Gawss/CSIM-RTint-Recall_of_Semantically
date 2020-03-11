@@ -12,6 +12,8 @@ public class Move_loop : MonoBehaviour
     public Vector3 initial_pos;
     public int scale;
 
+    public GameObject plane;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +26,8 @@ public class Move_loop : MonoBehaviour
         offset.x -= speed*SceneManager.Instance.globalSpeed/10000;
         offset.x %= 1;
         transform.position = initial_pos+(offset*scale);
-        Debug.Log(offset.x);
         if(offset.x < -0.9f){
+            plane.SetActive(false);
             SceneManager.Instance.sprite = Resources.Load<Sprite>("Sprites/img" + SceneManager.Instance.index);
         }
     }
