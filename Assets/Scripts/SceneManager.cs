@@ -26,7 +26,7 @@ namespace Experiment{
         private int velocity = 0;
 
         private int m_index;        
-
+        
         private Sprite m_sprite;
         private AudioClip m_audioClip;
 
@@ -100,7 +100,8 @@ namespace Experiment{
         public void PlayTrial(){
             //Play Sound + Image
             Debug.Log("Playing Trial...");
-            m_audioClip = Resources.Load<AudioClip>("Sounds/audio" + index);
+            m_audioClip = Resources.Load<AudioClip>("Sounds/pair" + index + "_audio");
+            Debug.Log(m_audioClip);
             Camera.main.GetComponent<AudioSource>().PlayOneShot(m_audioClip);
             isPlayingTrial = true;
             StartCoroutine(WaitForStimulus());

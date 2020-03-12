@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6564233, g: 0.72272307, b: 0.85666424, a: 1}
+  m_IndirectSpecularColor: {r: 0.6564234, g: 0.72272307, b: 0.8566642, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -528,7 +528,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_SizeDelta: {x: 1500, y: 768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &372823208
 Animator:
@@ -990,7 +990,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1141,7 +1141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21265e6cd13e635439912639f7f21a73, type: 2}
+  - {fileID: 2100000, guid: 0a930fcca15d5ab4c92e374caea2ab6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1178,7 +1178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165697456}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -94.12, y: -1.56, z: -25}
+  m_LocalPosition: {x: -94.12, y: -1.56, z: -37.4}
   m_LocalScale: {x: 390.2976, y: 14.715, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1526,7 +1526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21265e6cd13e635439912639f7f21a73, type: 2}
+  - {fileID: 2100000, guid: 0a930fcca15d5ab4c92e374caea2ab6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1563,7 +1563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227123633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.2, y: -2.31, z: 18.7}
+  m_LocalPosition: {x: -93.2, y: -2.31, z: 26.5}
   m_LocalScale: {x: 392.84225, y: 15.960001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_globalSpeed: 1
   sensitivity: 4
   plane: {fileID: 129045388}
-  num_pairs: 1
+  num_pairs: 3
   fade: {fileID: 372823206}
 --- !u!4 &2061678075
 Transform:
