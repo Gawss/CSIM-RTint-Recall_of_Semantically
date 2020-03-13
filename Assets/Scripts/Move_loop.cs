@@ -28,7 +28,7 @@ public class Move_loop : MonoBehaviour
         transform.position = initial_pos+(offset*scale);
         if(offset.x < -0.9f){
             plane.SetActive(false);
-            SceneManager.Instance.sprite = Resources.Load<Sprite>("Sprites/img" + SceneManager.Instance.index);
+            SceneManager.Instance.sprite = Resources.Load<Sprite>("Sprites/pair" + SceneManager.Instance.index + "_visual");
         }
     }
 }

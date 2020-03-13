@@ -9,7 +9,7 @@ public class UpdateStimuli : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.Instance.sprite = Resources.Load<Sprite>("Sprites/img" + SceneManager.Instance.index);
+        SceneManager.Instance.sprite = Resources.Load<Sprite>("Sprites/pair" + SceneManager.Instance.index + "_visual");
     }
 
     // Update is called once per frame

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6564234, g: 0.72272307, b: 0.8566642, a: 1}
+  m_IndirectSpecularColor: {r: 0.6564233, g: 0.72272307, b: 0.85666424, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_globalSpeed: 1
   sensitivity: 4
   plane: {fileID: 129045388}
-  num_pairs: 3
+  num_pairs: 50
   fade: {fileID: 372823206}
 --- !u!4 &2061678075
 Transform:
