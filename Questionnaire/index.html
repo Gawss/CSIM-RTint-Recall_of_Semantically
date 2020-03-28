@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#00000A">
+        <meta name="description" content="Research Study conducted by Master Students of the UPF Barcelona (CSIM)">
+        <meta name="author" content="Vivian Yuen, Luis Palacio, Jose Garcia, Marc Biemer">
+
+        <title>RTI - Research on Semantic Relatedness</title>
+
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+
+        <div id="Admin" class="page">
+            <div class="view">
+                <h1>Admin Panel</h1>
+                <div class="input-field">
+                    <label for="subjectId">Enter Subject ID:</label> 
+                    <input class="singleInput" type="number" id="subjectId" name="subject" placeholder="e.g. 13" autofocus>
+                </div>
+                <button onclick="SetAdmin()" type="button">Initialize the Test</button>
+            </div>
+        </div>
+
+        <div id="Start" class="page" style="display: none;">
+            <div class="view">
+                <h1>Hola!</h1>
+                <p>Thank you for participating. The next task will be explained to you on the following page. Before we start we'd like to know your demographics. Once you are ready to start with the next task, click Start.</p>
+                <div class="input-field">
+                    <label for="subjectAge">Your age:</label> 
+                    <input class="singleInput" type="number" id="subjectAge" name="subjectAge" placeholder="e.g. 25" autofocus>
+                </div>
+                <div class="input-field">
+                    <label for="subjectNationality">Your nationality:</label> 
+                    <input class="singleInput" type="text" id="subjectNationality" name="subjectNationality" placeholder="e.g. Spanish" autofocus>
+                </div>
+                <div class="input-field">
+                    <label for="subjectSex">Your sex:</label> 
+                    <input class="singleInput" type="text" id="subjectSex" name="subjectSex" placeholder="female or male" autofocus>
+                </div>
+                <button onclick="StartQuestionnaire()" type="button">Start</button>
+            </div>
+        </div>
+
+        <div id="Start-Distraction" class="page" style="display: none;">
+            <div class="view">
+                <h1>Remember the numbers.</h1>
+                <p>You will now complete a digit memory task. The computer will display seven digits, one at a time. After the digits have been displayed, we ask you to type in the digits that you saw in the order you saw them. If you cannot remember all seven digits just enter as many digits as you can remember. The computer will tell you when you have completed the task.</p>
+                <button onclick="StartDistraction()" type="button">Get First Digit Set</button>
+            </div>
+        </div>
+
+        <div id="Distraction-Task" class="page" style="display: none;">
+            <div class="view">
+                <h1 id="Digit">&nbsp;</h1>
+                <div class="input-field" id="Distraction-Form" style="display: none;">
+                    <label for="Distraction-Input">Enter the 7-digit Number:</label> 
+                    <input class="singleInput" type="number" id="Distraction-Input" name="distraction" placeholder="e.g. 1234567" maxlength="7" required>
+                    <button onclick="NextDistraction()" type="button" style="margin-top: 10rem;">Submit Number</button>
+                </div> 
+            </div>
+        </div>
+
+
+        <div id="Start-Recall" class="page" style="display: none;">
+            <div class="view">
+                <h1>Do you remember the sounds/images?</h1>
+                <p>During your virtual tour you encountered multiple billboards. Do you remember the combinations of sounds and images you've seen? We will now present you either the image or the sound of one of the billboards. Please enter the word which was presented with it during your virtual tour (e.g. if we show you the picture of a house, think of the sound that came with it). If you're not sure, you can skip the question.</p>
+                <button onclick="StartRecall()" type="button">Start Memory Test</button>
+            </div>
+        </div>
+
+        <div id="Recall-Task" class="page" style="display: none">
+            <div class="view">
+                <h1 id="PairCount">&nbsp;</h1>
+                <div class="stimulus" id="Stimulus">
+                    <!-- <img id="Visual" src=""> -->
+                    <!-- <figure>
+                        <figcaption>Click to play the sound.</figcaption>
+                        <audio id="Audio"
+                            controls
+                            src="">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                        </audio>
+                    </figure> -->
+                </div>
+                <div class="input-field">
+                    <label for="stimulusEntry">Which stimulus did you see/hear together with the one above?</label> 
+                    <input class="singleInput" type="text" id="stimulusEntry" name="stimulusEntry" placeholder="your answer here" autofocus>
+                </div>
+                <div class="input-field">
+                    <label for="confidenceEntry">How confident are you about your answer? <br>(0=not confident, 100=fully confident)</label> 
+                    <div class="slider">
+                        <p>0</p>
+                        <input class="slider" type="range" id="confidenceEntry" name="confidenceEntry" value=".5" min="0" max="1" step=".01">
+                        <p>100</p>
+                    </div>
+                </div>
+                <button onclick="SubmitRecall()" type="button">Submit Answer</button>
+            </div>
+        </div>
+
+        <div id="End" class="page" style="display: none;">
+            <div class="view">
+                <h1>Thanks for participating.</h1>
+                <p>The objective of this experiment was to determine the impact of semantic relatedness between acoustic and visual stimuli on working memory through retrieval of the stimuli pairs. To do that, the experiment employs a within-subject design, comparing multiple pairs with different levels of relatedness. To ensure that you don’t start remembering stimuli pairs consciously and through rehearsal, we were not able to tell you at the start of the session, that you’ll need to conduct a memory test. We hope you understand that. For each participant, we will calculate the within-subject ANOVA between the proportion of recalled words. If the experimental hypothesis is supported, there will be a significant difference in recall between highly un- and related pairs. The null hypothesis is that there will be no significant difference. Once again, the data you provide will be recorded anonymously and your participation and anything you say during the session will be held in the strictest confidence. If you wish for your data to be deleted at any time, please contact marccedric.biemer01@estudiant.upf.edu or vivian.yuen01@estudiant.upf.edu.</p>
+                <button onclick="EndAdmin()" type="button">Open Admin Panel</button>
+            </div>
+        </div>
+
+        <div id="Download" class="page" style="display: none;">
+            <div class="view download">
+                <a href='#' onclick='DownloadLog()'>Download Recorded Values as CSV</a>
+            </div>
+        </div>
+    </body>
+
+</html>

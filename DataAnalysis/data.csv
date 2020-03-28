@@ -1,0 +1,10 @@
+Id,age,nationality,sex,entry_1,confidence_1,visualStimulus_1,entry_11,confidence_11,visualStimulus_11,entry_20,confidence_20,visualStimulus_20,entry_34,confidence_34,visualStimulus_34,entry_35,confidence_35,visualStimulus_35
+1,25,German,male,shoe,0.33,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+2,21,Spanish,female,shoe,0.5,TRUE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+3,22,Spanish,male,shoe,0.7,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+4,24,Spanish,female,shoe,0.9,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+5,27,Spanish,male,car,0.33,TRUE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+6,26,Spanish,female,car,0.5,TRUE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+7,31,German,female,car,0.7,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+8,27,Spanish,male,car,0.9,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
+9,21,Spanish,female,car,0.33,FALSE,duck,0.07,FALSE,car,0.76,TRUE,horse,0.75,TRUE,sheep,0.86,FALSE
